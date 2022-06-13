@@ -1,0 +1,94 @@
+a {
+  color: white;
+}
+
+/* head menu */
+.headMenu {
+  background-color: rgba(50, 256, 256, 0.2);
+  width: 100%;
+  height: 135px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+/* 언어 */
+.lang {
+  flex: 1;
+}
+.lang > span {
+  padding: 0px 20px;
+}
+
+/* erugo logo */
+.logo {
+  flex: 4;
+}
+
+/* menu 버튼 */
+.headBtn {
+  flex: 1;
+}
+
+.headBtn > span:last-child {
+  padding-left: 30px;
+}
+
+/* 메인 배경 */
+.mainBg {
+  background: url(../images/mainBg.jpg) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  color: white;
+}
+
+/* mainpage 버튼들 */
+.boxContainer {
+  height: calc(100vh - 135px);
+  background-color: rgba(0, 0, 0, 0.288);
+  position: relative;
+}
+.boxs {
+  display: flex;
+  justify-content: center;
+  padding-top: 6%;
+}
+.box {
+  width: 640px;
+  height: 640px;
+  background-color: rgba(42, 107, 164, 0.457);
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 고잉, 페이지 수 */
+.bottomContainer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 100px;
+  z-index: 0;
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+.pageN {
+  align-self: flex-end;
+  font-size: 50px;
+}
+.goingLeft {
+  background: url(../images/going-left.png) no-repeat center center;
+}
+.goingRight {
+  background: url(../images/going-right.png) no-repeat center center;
+}
+.going {
+  background-color: rgba(153, 205, 50, 0.273);
+  width: 283px;
+  height: 505px;
+  background-size: contain;
+}

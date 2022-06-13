@@ -1,0 +1,203 @@
+/*  */
+body {
+  background: url(../images/aboutBg.jpg) center no-repeat;
+  position: relative;
+  background-size: cover;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+/* head menu */
+.headMenu {
+  background-color: rgba(50, 256, 256, 0.2);
+  width: 100%;
+  height: 135px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+/* 언어 */
+.lang {
+  flex: 1;
+}
+.lang > span {
+  padding: 0px 20px;
+}
+
+/* erugo logo */
+.logo {
+  flex: 4;
+}
+
+/* menu 버튼 */
+.headBtn {
+  flex: 1;
+}
+
+/* 내용 전체 */
+.bodyContainer {
+  height: calc(100vh - 135px);
+}
+
+/* topSection: 제목, 페이지수 */
+.topSection {
+  background-color: rgba(255, 255, 0, 0.3);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 250px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: "Poller One", cursive;
+  color: #010101;
+  font-size: 164px;
+  flex: 1;
+}
+.scroll {
+  flex: 2;
+}
+.pageNum {
+  text-align: center;
+  line-height: 150px;
+  border-radius: 50%;
+  min-width: 150px;
+  min-height: 150px;
+  background-color: rgba(105, 90, 205, 0.314);
+}
+
+/* mainContent : img, 해당 글 */
+.mainContent {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  height: calc(100% - 250px);
+}
+
+.img {
+  background: url(../images/about1.png) center no-repeat;
+  background-size: contain;
+  align-self: center;
+  flex: 1;
+  height: 100%;
+  background-color: rgba(238, 130, 238, 0.414);
+}
+.content {
+  align-self: flex-end;
+  height: 50%;
+  flex: 1;
+  background-color: rgba(64, 224, 208, 0.439);
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.content::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+@media screen and (max-width: 1920px) {
+  .title {
+    font-size: 130px;
+  }
+}
+@media screen and (max-width: 1240px) {
+  .topSection {
+    height: 220px;
+  }
+  .pageNum {
+    max-width: 120px;
+    max-height: 120px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .topSection {
+    height: 20vmax;
+    position: relative;
+  }
+  .title {
+    font-size: 10vmax;
+  }
+  .mainContent {
+    display: block;
+  }
+  .img {
+    width: 100%;
+    height: 55%;
+  }
+  .content {
+    width: 100%;
+    height: 48%;
+    min-height: 40vmin;
+  }
+
+  .pageNum {
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 110px;
+    min-width: 110px;
+    min-height: 110px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .headMenu {
+    font-size: 3vmax;
+    height: 15vmax;
+  }
+  .scroll {
+    font-size: 3vmax;
+  }
+  .pageNum {
+    line-height: 90px;
+    min-width: 90px;
+    min-height: 90px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .headMenu {
+    font-size: 2vmax;
+    height: 10vmax;
+  }
+  .lang > span {
+    padding: 0px 5px;
+  }
+  .topSection {
+    height: 15vmax;
+  }
+  .title {
+    font-size: 6vmax;
+  }
+  .scroll {
+    font-size: 2vmax;
+  }
+  .pageNum {
+    line-height: 70px;
+    min-width: 70px;
+    min-height: 70px;
+  }
+  .img {
+    height: 45vmax;
+  }
+}
+
+/* 모바일 가로 모드 */
+@media all and (orientation: landscape) {
+  @media screen and (max-width: 950px) {
+    body {
+      height: 100vmax;
+    }
+    .img {
+      height: 40vmax;
+    }
+  }
+}

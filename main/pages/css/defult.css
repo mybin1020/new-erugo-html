@@ -1,0 +1,48 @@
+/* 기본적으로 들어갈 css */
+h1,
+h2,
+h3,
+a,
+ul,
+li,
+ol,
+p,
+div,
+embed,
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 28px;
+  font-weight: normal;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #000;
+}
+
+/* list 장식 제거 */
+ul,
+li {
+  list-style: none;
+}
+
+/* 이미지 와 글자의 정렬로 생기는 여백 제거 */
+img {
+  vertical-align: top;
+}
+
+/* i,em,address */
+i,
+em,
+address {
+  font-style: normal;
+}
+input,
+button {
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+}

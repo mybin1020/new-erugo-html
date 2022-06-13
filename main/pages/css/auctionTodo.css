@@ -1,0 +1,247 @@
+/* back, 이동버튼 */
+.buttons {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 260px;
+  background-color: rgba(255, 255, 255, 0.223);
+  z-index: 5;
+}
+
+.back {
+  background: url(../images/auctionBack-01.png) no-repeat center;
+  background-size: contain;
+  width: 6%;
+  left: 1%;
+}
+.back:hover {
+  background: url(../images/auctionBack-02.png) no-repeat center;
+  background-size: contain;
+}
+.move {
+  background: url(../images/auctionBtn-02.png) no-repeat center;
+  background-size: cover;
+  width: 15%;
+  right: 0;
+}
+
+.back,
+.move {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100%;
+  background-color: rgba(123, 103, 237, 0.325);
+  cursor: pointer;
+}
+
+/* 제일 바깥 배경 */
+.container {
+  background: url(../images/auctionBg.jpg) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4fr;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* auction 이용방법 */
+.headTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.headTitle > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: url(../images/headTitle.png) no-repeat center;
+  object-fit: contain;
+  font-size: 50px;
+}
+
+/* 안쪽 내용 배경 */
+.contents {
+  background: url(../images/contentBg.png) no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  width: 100%;
+  max-width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: center;
+  z-index: 2;
+  margin: 0 auto;
+  background-color: rgba(226, 202, 172, 0.334);
+}
+
+/* 왼쪽 이미지 */
+.auctionImg {
+  background: url(../images/step1.png) no-repeat center;
+  background-size: contain;
+  background-color: rgba(255, 255, 0, 0.31);
+  width: 43%;
+  height: 70%;
+}
+
+/* 오른쪽 글 */
+.textBox {
+  width: 45%;
+  align-self: flex-end;
+  height: 65%;
+  padding: 0 2vmax;
+  margin-bottom: 50px;
+  background-color: rgba(64, 224, 208, 0.253);
+  line-height: 5rem;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.textBox::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+.contentTitle {
+  background: url(../images/cTitle.png) no-repeat center;
+  text-align: center;
+  background-size: contain;
+  width: 363px;
+  font-size: 33px;
+  font-weight: bold;
+  margin-bottom: 5%;
+}
+/* 모바일 페이지수 */
+.dotBtn {
+  display: none;
+  position: absolute;
+  bottom: 3%;
+  /* background-color: rgba(0, 255, 255, 0.369); */
+  right: 0;
+  width: 10%;
+}
+.dot {
+  background: url(../images/point.png) no-repeat center;
+}
+.active {
+  background: url(../images/point-active.png) no-repeat center;
+}
+.dot,
+.active {
+  background-size: contain;
+  width: 100%;
+  height: 5vmin;
+}
+/* 가로모드 */
+@media screen and (orientation: landscape) {
+  @media screen and (max-width: 1400px) {
+    .contents {
+      height: 80%;
+    }
+    .headTitle > span {
+      background-size: 50%;
+      font-size: 3vmax;
+    }
+    .contentTitle {
+      width: 40%;
+      object-fit: cover;
+      margin: 0;
+      padding: 20px 0;
+      font-size: 2.5vmax;
+    }
+
+    .textBox {
+      font-size: 1.8vmax;
+      line-height: 1.8;
+    }
+  }
+  @media screen and (max-width: 920px) {
+    .headTitle > span {
+      font-size: 2.5vmax;
+      background-size: 35% 150%;
+    }
+  }
+}
+/* 세로모드 */
+@media screen and (orientation: portrait) {
+  @media screen and (max-width: 940px) {
+    .dotBtn {
+      display: block;
+    }
+    .buttons {
+      display: block;
+    }
+    .back {
+      left: 5%;
+      width: 14%;
+    }
+    .move {
+      width: 30%;
+    }
+    .contents {
+      flex-direction: column;
+      width: 85%;
+      height: 95%;
+      background: url(../images/auction-mobile.png) no-repeat center;
+      background-size: 100% 100%;
+    }
+    .headTitle {
+      padding-top: 120px;
+      height: 80%;
+    }
+    .headTitle > span {
+      background-size: contain;
+      font-size: 3vmax;
+    }
+    .auctionImg {
+      width: 80%;
+      height: 80%;
+      margin: 5% 0;
+      margin-top: 10%;
+    }
+    .contentTitle {
+      width: 40%;
+      margin: 20px 0;
+      font-size: 2vmax;
+    }
+
+    .textBox {
+      width: 80%;
+      max-height: 70%;
+      min-height: 200px;
+      align-self: center;
+      padding: 0;
+      font-size: 1.7vmax;
+      line-height: 2.5rem;
+      margin-bottom: 45px;
+      font-weight: 600;
+    }
+    .text > span {
+      display: block;
+      font-weight: 100;
+      margin-top: 20px;
+      line-height: 1.7rem;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .dot,
+    .active {
+      background-size: cover;
+      width: 100%;
+      height: 7vmin;
+    }
+    .auctionImg {
+      height: 50%;
+    }
+  }
+}

@@ -1,0 +1,208 @@
+.mapContainer {
+  background: url(../images/map-bg.jpg) no-repeat center;
+  background-size: 100% 100%;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+/* top 메뉴 (back, menu) */
+.topMenu {
+  position: relative;
+  width: 100%;
+  height: 103px;
+  background-color: rgba(0, 255, 255, 0.317);
+}
+
+.backBtn,
+.menuBtn {
+  position: absolute;
+  background-size: contain !important;
+  width: 3.5vmax;
+  height: 3.5vmax;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.backBtn {
+  background: url(../images/back.png) no-repeat center;
+  left: 1%;
+}
+.menuBtn {
+  background: url(../images/map-menu.png) no-repeat center;
+  right: 0.5%;
+}
+
+/* 맵 지도 & 버튼들 */
+.mainContainer {
+  display: grid;
+  grid-template-columns: 1.25fr 20fr 1fr;
+  height: calc(100% - 150px);
+}
+
+/* 왼쪽 메뉴 */
+.leftMenu {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.329);
+  position: relative;
+}
+.btnContainer {
+  width: 100%;
+  height: 80%;
+}
+.message,
+.mypage {
+  width: 100%;
+  height: 30%;
+}
+.message {
+  background: url(../images/message-btn.png) no-repeat center;
+  background-size: contain;
+}
+.mypage {
+  background: url(../images/my-page-btn.png) no-repeat center;
+  background-size: contain;
+}
+.leftMenu img {
+  width: 10vmax;
+}
+
+.upBtn {
+  position: absolute;
+  bottom: 3%;
+  width: 200px;
+  height: 100px;
+  writing-mode: horizontal-tb;
+  transform: rotate(90deg);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.upBtn > span {
+  font-size: 1.2vmax;
+  cursor: pointer;
+  color: #fff;
+}
+.upBtn > span:last-child > img {
+  transform: rotate(270deg);
+}
+
+/* map */
+.map {
+  align-self: flex-start;
+  justify-self: center;
+  width: 97.5%;
+  height: 1104px;
+  background-color: rgba(162, 237, 49, 0.807);
+}
+
+/* 오른쪽 메뉴 */
+.rightContainer {
+  height: 100%;
+  background-color: rgba(238, 130, 238, 0.327);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.check {
+  background: url(../images/check.png) no-repeat center;
+}
+
+.my-land {
+  background: url(../images/my-land.png) no-repeat center;
+}
+.check,
+.sale,
+.my-land {
+  width: 35px;
+  height: 20%;
+  background-size: contain;
+}
+.sale {
+  background: url(../images/sale.png) no-repeat center;
+  background-size: contain;
+}
+
+@media all and (orientation: portrait) {
+  @media screen and (max-width: 920px) {
+    .mapContainer {
+      background: url(../images/map-mobile-bg.jpg) no-repeat center;
+      background-size: 100% 100%;
+    }
+    .map {
+      height: 839px;
+    }
+    .backBtn,
+    .menuBtn {
+      width: 6vmax;
+      height: 6vmax;
+    }
+    .mainContainer {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 2fr 1fr;
+      /* height: calc(100% - 9vmax); */
+    }
+    .leftMenu {
+      transform: rotate(360deg);
+      flex-direction: row;
+      height: 11vmax;
+    }
+    .btnContainer {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    .message,
+    .mypage {
+      width: 10%;
+      min-width: 150px;
+      height: 50%;
+    }
+    .message {
+      background: url(../images/message-mobile.png) no-repeat center;
+    }
+    .mypage {
+      background: url(../images/my-page-mobile.png) no-repeat center;
+    }
+    .upBtn {
+      right: 0;
+      width: 30%;
+      height: 50%;
+      transform: rotate(360deg);
+    }
+    .upBtn > span:last-child {
+      width: 50%;
+    }
+    .upBtn > span:last-child > img {
+      transform: rotate(90deg);
+    }
+    .map {
+      height: 100%;
+      width: 95.5%;
+    }
+    .rightContainer {
+      flex-direction: row;
+    }
+    .check,
+    .sale,
+    .my-land {
+      width: 100%;
+      height: 100%;
+    }
+    .check {
+      background: url(../images/check-mobile.png) no-repeat center;
+    }
+    .sale {
+      background: url(../images/sale-mobile.png) no-repeat center;
+    }
+    .my-land {
+      background: url(../images/my-land-mobile.png) no-repeat center;
+    }
+  }
+}
