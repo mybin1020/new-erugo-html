@@ -41,6 +41,7 @@ address {
 input,
 button {
   vertical-align: bottom;
+  border: none;
 }
 
 a {

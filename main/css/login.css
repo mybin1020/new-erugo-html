@@ -1,0 +1,133 @@
+/* head menu */
+.headMenu {
+  background-color: rgba(50, 256, 256, 0.2);
+  width: 100%;
+  height: 135px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+/* 언어 */
+.lang {
+  flex: 1;
+}
+.lang > span {
+  padding: 0px 20px;
+}
+
+/* erugo logo */
+.logo {
+  flex: 4;
+}
+
+/* menu 버튼 */
+.headBtn {
+  flex: 1;
+}
+
+/* loginBg */
+.loginBg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: url(../images/loginBg.jpg) no-repeat center;
+  background-size: cover;
+}
+/* 로그인 창 */
+.logContainer {
+  width: 1023px;
+  height: 812px;
+  background-color: rgba(198, 198, 198, 0.379);
+  background: url(../images/loginWindow.png) no-repeat center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.logContainer > form {
+  width: 70%;
+  margin-top: 240px;
+}
+/* 이메일 */
+.emailBox {
+  display: flex;
+}
+.emailBox > label {
+  background: url(../images/iconMail.png) no-repeat center;
+}
+
+/* 비밀번호 */
+.pwdBox {
+  display: flex;
+}
+.pwdBox > label {
+  background: url(../images/iconPwd.png) no-repeat center;
+}
+
+/* email, pwd 공통사항 */
+.emailBox,
+.pwdBox {
+  margin: 1rem 0;
+  height: 60px;
+  background-color: #fff;
+}
+.pwdBox > label,
+.emailBox > label {
+  width: 30%;
+}
+.pwdBox > input,
+.emailBox > input {
+  position: relative;
+  width: 70%;
+  font-size: 25px;
+  padding-left: 5%;
+}
+input::placeholder {
+  color: rgb(198, 198, 198);
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45%;
+}
+/* login */
+.loginBtn {
+  width: 100%;
+  height: 70px;
+  background: url(../images/signBg.png) no-repeat center;
+  color: #fff;
+  font-size: 25px;
+}
+
+/* 공지글 */
+.textBox {
+  width: 70%;
+  font-size: 17px;
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+/* 회원가입, 비밀번호 변경 */
+.btnContainer {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+}
+
+/* .signupBtn, .resetBtn 공통사항 */
+.bottomBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 50px;
+  font-size: 20px;
+  border: 2px solid #fff;
+  color: #fff;
+}

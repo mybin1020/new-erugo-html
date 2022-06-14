@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>main page</title>
-    <link rel="stylesheet" href="pages/css/defult.css">
-    <link rel="stylesheet" href="pages/css/main.css">
+    <link rel="stylesheet" href="./css/defult.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
@@ -22,7 +22,7 @@
             </div>
             <h1 class="logo">logo</h1>
             <div class="headBtn">
-                <span><a href="pages/login/index.html">LOG IN</a></span>
+                <span><a href="./login/index.html">LOG IN</a></span>
                 <span>MENU</span>
             </div>
         </div>
@@ -30,13 +30,13 @@
         <div class="boxContainer">
             <div class="boxs">
                 <div class="box">
-                    <a href="pages/about/index.html" target="_blank">about</a>
+                    <a href="./about/index.html" target="_blank">about</a>
                 </div>
                 <div class="box">
-                    <a href="pages/auction/index.html" target="_blank">auction</a>
+                    <a href="./auction/index.html" target="_blank">auction</a>
                 </div>
                 <div class="box">
-                    <a href="pages/market/index.html" target="_blank">market</a>
+                    <a href="./market/index.html" target="_blank">market</a>
                 </div>
             </div>
         </div>
@@ -47,6 +47,12 @@
             <div class="goingRight going"></div>
         </div>
     </div>
+
+    <script>
+        function linkGo(url) {
+            location.href = this.url;
+        }
+    </script>
 </body>
 
 </html>
