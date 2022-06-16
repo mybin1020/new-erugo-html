@@ -1,0 +1,34 @@
+const loginResize = function () {
+  const windowHeight = document.querySelector(".loginBg").clientHeight;
+  const windowWidth = document.querySelector(".loginBg").clientWidth;
+  const loginWindow = document.querySelector(".logContainer");
+  const logContainerHeight =
+    document.querySelector(".logContainer").clientHeight;
+  const logContainerWidth = document.querySelector(".logContainer").clientWidth;
+  const loginFormHeight = document.querySelector(".logContainer>form");
+  const pwdBoxHeight = document.querySelector(".pwdBox");
+
+  // login window position height
+  let loginWindowH = windowHeight * (5648 / 100000);
+  loginWindow.style.marginTop = loginWindowH + "px";
+
+  //login form margin top
+  let formTop = logContainerHeight * (30581 / 100000);
+  loginFormHeight.style.marginTop = formTop + "px";
+  console.log("로그 하이!" + logContainerHeight + "이게 결과!" + formTop);
+
+  if (windowWidth <= 1023) {
+    loginWindow.style.width = windowWidth + "px";
+  } else {
+    loginWindow.style.width = 1023 + "px";
+  }
+
+  loginWindow.style.height = logContainerWidth * (79374 / 100000) + "px";
+};
+
+window.addEventListener(
+  "DOMContentLoaded",
+  (window.onresize = function () {
+    loginResize();
+  })
+);

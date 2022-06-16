@@ -44,10 +44,10 @@
 /* 로그인 창 */
 .logContainer {
   width: 1023px;
-  /* height: 812px; */
-  background-color: rgba(246, 31, 31, 0.832);
+  height: 812px;
+  background-color: rgba(198, 198, 198, 0.379);
   background: url(../images/loginWindow.png) no-repeat center;
-  background-size: 100% 100%;
+  background-size: contain;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -55,7 +55,7 @@
 }
 .logContainer > form {
   width: 70%;
-  /* margin-top: 240px; */
+  margin-top: 240px;
 }
 /* 이메일 */
 .emailBox {
@@ -113,7 +113,6 @@ input::placeholder {
   height: 5.5vmax;
   max-height: 70px;
   background: url(../images/signBg.png) no-repeat center;
-  background-size: cover;
   color: #fff;
   font-size: 25px;
 }
@@ -141,98 +140,48 @@ input::placeholder {
   align-items: center;
   max-width: 250px;
   max-height: 50px;
-  min-height: 5vmin;
   min-width: 25vmin;
   font-size: 20px;
   border: 2px solid #fff;
   color: #fff;
-  text-align: center;
 }
 
-@media all and (orientation: landscape) {
-  @media screen and (max-width: 1240px) {
-    .logContainer {
-      width: 70%;
-      margin-top: 10%;
-    }
-  }
-  @media screen and (max-width: 920px) {
-    .headMenu {
-      height: 8vmax;
-    }
-    .logContainer {
-      width: 60%;
-      margin-top: 7%;
-    }
-    .emailBox,
-    .pwdBox {
-      height: 3.5vmax;
-    }
-    .loginBtn {
-      height: 4vmax;
-    }
-    .pwdBox > input,
-    .emailBox > input {
-      font-size: 1.5vmax;
-    }
-    .loginBtn,
-    input::placeholder {
-      font-size: 1.6vmax;
-    }
-    .textBox {
-      font-size: 1vmax;
-      padding-bottom: 10px;
-    }
-    .bottomBtn {
-      font-size: 1.2vmax;
-      min-height: 6vmin;
-      min-width: 30vmin;
-    }
-  }
+@media screen and (max-width: 1024px) {
 }
 
 @media screen and (max-width: 920px) {
-  .logContainer > form {
-    width: 75%;
-  }
-  .textBox {
-    width: 75%;
-  }
-  .btnContainer {
-    width: 75%;
-  }
+  /* email, pwd 공통사항 */
   .emailBox,
   .pwdBox {
     margin: 1% 0;
   }
-  .bottomBtn {
-    border: 1px solid #fff;
-  }
-}
-
-@media screen and (max-width: 420px) {
-  .emailBox,
-  .pwdBox {
-    height: 3.5vmax;
-  }
-  .loginBtn {
-    height: 4vmax;
-  }
   .pwdBox > input,
   .emailBox > input {
+    width: 80%;
     font-size: 1.5vmax;
+    padding-left: 2%;
   }
-  .loginBtn,
   input::placeholder {
-    font-size: 1.6vmax;
+    width: 80%;
+    font-size: 2vmax;
   }
+  /* login */
+  .loginBtn {
+    font-size: 2.2vmax;
+  }
+  /* 공지글 */
   .textBox {
-    font-size: 1vmax;
-    padding-bottom: 10px;
+    font-size: 1.5vmax;
+    padding-bottom: 4%;
   }
   .bottomBtn {
-    font-size: 1.2vmax;
-    min-height: 6vmin;
-    min-width: 30vmin;
+    font-size: 1.3vmax;
+  }
+}
+@media screen and (max-width: 420px) {
+  /* 공지글 */
+  .textBox {
+    font-size: 1vmax;
+    padding-bottom: 4%;
   }
 }

@@ -1,22 +1,41 @@
 const loginResize = function () {
-  const windowHeight = document.querySelector(".loginBg").clientHeight;
-  const windowWidth = document.querySelector(".loginBg").clientWidth;
-  const loginWindow = document.querySelector(".logContainer");
-  const logContainerHeight =
+  //전체 영역의 크기
+  let window_width = window.innerWidth;
+  let window_height = window.innerHeight;
+
+  //logContainer의 크기
+  let logContainer = document.querySelector(".logContainer");
+  let logContainer_width = document.querySelector(".logContainer").clientWidth;
+  let logContainer_height =
     document.querySelector(".logContainer").clientHeight;
-  const loginFormHeight = document.querySelector(".logContainer>form");
+  // 로그인 창
+  let containerH = logContainer_width * (67779 / 100000);
+  logContainer.style.height = containerH + "px";
+  // let containerW = logContainer_height * (46143 / 100000);
+  // logContainer.style.width = containerW + "px";
 
-  // login window position height
-  let loginWindowH = windowHeight * (21648 / 100000);
-  loginWindow.style.marginTop = loginWindowH + "px";
-  // login window position left
-  let loginWindowL = windowWidth * (30011 / 100000);
-  loginWindow.style.marginLeft = loginWindowL + "px";
-  loginWindow.style.marginRight = loginWindowL + "px";
+  // form margin top
+  let inputForm = document.querySelector(".logContainer > form");
+  let marginTop = containerH * (30120 / 100000);
+  inputForm.style.marginTop = marginTop + "px";
 
-  //login form margin top
-  let formTop = logContainerHeight * (34033 / 100000);
-  loginFormHeight.style.marginTop = formTop + "px";
+  if (window_width > window_height) {
+    let containerH = logContainer_width * (77779 / 100000);
+    logContainer.style.height = containerH + "px";
+    if (window_width < 920) {
+      let containerH = logContainer_width * (60779 / 100000);
+      logContainer.style.height = containerH + "px";
+      let marginTop = containerH * (30120 / 100000);
+      inputForm.style.marginTop = marginTop + "px";
+    }
+  }
+
+  if (window_width < 600) {
+    let containerH = logContainer_width * (85779 / 100000);
+    logContainer.style.height = containerH + "px";
+    let marginTop = containerH * (30120 / 100000);
+    inputForm.style.marginTop = marginTop + "px";
+  }
 };
 
 window.addEventListener(
