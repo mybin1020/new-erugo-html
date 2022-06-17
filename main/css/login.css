@@ -52,6 +52,13 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  overflow-y: hidden;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.logContainer::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
 }
 .logContainer > form {
   width: 70%;
@@ -113,7 +120,7 @@ input::placeholder {
   height: 5.5vmax;
   max-height: 70px;
   background: url(../images/signBg.png) no-repeat center;
-  background-size: cover;
+  background-size: 102% 120%;
   color: #fff;
   font-size: 25px;
 }

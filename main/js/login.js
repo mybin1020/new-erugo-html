@@ -16,11 +16,11 @@ const loginResize = function () {
 
   // form margin top
   let inputForm = document.querySelector(".logContainer > form");
-  let marginTop = containerH * (30120 / 100000);
+  let marginTop = containerH * (31120 / 100000);
   inputForm.style.marginTop = marginTop + "px";
 
   if (window_width > window_height) {
-    let containerH = logContainer_width * (77779 / 100000);
+    let containerH = logContainer_width * (69779 / 100000);
     logContainer.style.height = containerH + "px";
     if (window_width < 920) {
       let containerH = logContainer_width * (60779 / 100000);
@@ -28,6 +28,7 @@ const loginResize = function () {
       let marginTop = containerH * (30120 / 100000);
       inputForm.style.marginTop = marginTop + "px";
     }
+  } else {
   }
 
   if (window_width < 600) {
