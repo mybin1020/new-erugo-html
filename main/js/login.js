@@ -4,6 +4,7 @@ const loginResize = function () {
   let window_height = window.innerHeight;
   // body 높이
   let body_height = document.getElementById("bodyBg");
+  let body_H = body_height.clientHeight;
   //headMenu 높이
   let menuHeight = document.querySelector(".headMenu").clientHeight;
   //logContainer
@@ -11,36 +12,33 @@ const loginResize = function () {
   let logContainer_width = document.querySelector(".logContainer").clientWidth;
   let logContainer_height =
     document.querySelector(".logContainer").clientHeight;
+  let loginBg_height = document.querySelector(".loginBg").clientHeight;
 
-  // formBox margin top
-  let formBox = document.querySelector(".formBox");
-  let form_marginTop = logContainer_height * (15009 / 100000);
-  // formBox.style.marginTop = form_marginTop + "px";
   // formBox height
-  let form_hegiht = logContainer_height - form_marginTop;
-  formBox.style.height = form_hegiht + "px";
+  let formBox = document.querySelector(".formBox");
+  let form_height = logContainer_height * (63202 / 100000);
+  formBox.style.height = form_height + "px";
 
-  //logContainer width
+  //logContainer marginTop
+  let container_height_margin = (body_H - logContainer_height) / 2;
 
-  let container_height_margin = (window_height - logContainer_height) / 2;
-  logContainer.style.marginTop = container_height_margin + "px";
-
-  //[react.js] if문 조건을 maginTop==menuHeight 일 때로 지정하시용
-  if (menuHeight + "px" >= 135 + "px") {
-    //logContainer의 margin = headmenu height;
-
-    console.log("headmenu : " + menuHeight);
-    console.log("logcontainer margin top : " + logContainer.style.marginTop);
-    logContainer.style.marginTop = menuHeight * 2 + "px";
-
-    //조건문이 맞을 때 [활성화]
-    body_height.style.height =
-      menuHeight * 2 + logContainer_height + 200 + "px";
-  }
-
-  //logContainer height
-  // logContainer.style.height = 712 + "px";
-  if (window_width === logContainer_width) {
+  // PC 버전
+  if (window_width > window_height) {
+    logContainer.style.height = log_height + "px";
+    logContainer.style.marginTop = container_height_margin + "px";
+    //[react.js] if문 조건을 container_height_margin==menuHeight 일 때로 지정
+    if (menuHeight + "px" >= 135 + "px") {
+      //logContainer의 margin = headmenu height;
+      logContainer.style.marginTop = menuHeight * 2 + "px";
+      logContainer.style.height = log_height + "px";
+    }
+  } else {
+    //Mobile 버전
+    logContainer.style.marginTop = container_height_margin + "px";
+    // 배경 높이
+    body_height.style.height = loginBg_height + "px";
+    console.log(logContainer_height);
+    //logContainer height
     let log_height = window_width * (77779 / 100000);
     logContainer.style.height = log_height + "px";
   }

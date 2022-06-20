@@ -3,6 +3,7 @@
   width: 100%;
   height: 100vh;
   background-size: cover;
+  z-index: -2;
 }
 
 /* head menu */
@@ -16,6 +17,7 @@
   justify-content: space-around;
   text-align: center;
   overflow: hidden;
+  z-index: 3;
 }
 /* 언어 */
 .lang {
@@ -38,7 +40,6 @@
 /* loginBg */
 .loginBg {
   position: absolute;
-  z-index: -1;
   top: 0;
   width: 100%;
   height: 100%;
@@ -78,13 +79,16 @@
 .formBox {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: rgba(153, 205, 50, 0.509);
   width: 70%;
   justify-self: center;
   overflow: scroll;
   height: 100%;
-  /* margin-bottom: 5px; */
+  margin-bottom: 3%;
+}
+.formBox::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
 }
 
 /* 이메일 */
