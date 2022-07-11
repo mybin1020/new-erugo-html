@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poller+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/defult.css">
+    <link rel="stylesheet" href="../../css/menu.css">
+</head>
+
+<body class="color">
+    <div class="menuContainer">
+        <div class="menu-btn">
+            <p class="menu">MENU</p>
+            <p class="close-btn" onclick="closeBtn()">
+                <span class="one"></span>
+                <span class="two"></span>
+            </p>
+        </div>
+        <ul class="menuList">
+            <li onclick="location.href='../about/index.html'">
+                01
+                <p class="list-img">ABOUT</p>
+                <img src="../../images/menu-01.png" alt="">
+            </li>
+            <li onclick="location.href='../about/index.html'">
+                02
+                <p class="list-img">CITIZENSHIP</p>
+                <img src="../../images/menu-02.png" alt="">
+            </li>
+            <li onclick="location.href='../auction/index.html'">
+                03
+                <p class="list-img">AUCTION </p>
+
+                <span>/ MY BID</span>
+                <span>/ HIGHEST BID</span>
+                <img src="../../images/menu-03.png" alt="">
+            </li>
+            <li>
+                04
+                <p class="list-img">BUY LAND</p>
+                <img src="../../images/menu-04.png" alt="">
+            </li>
+            <li onclick="location.href='../market/index.html'">
+                05
+                <p class="list-img">MARKET</p>
+                <img src="../../images/menu-05.png" alt="">
+            </li>
+            <li onclick="location.href='../mypage/index.html'">
+                06
+                <p class="list-img">MYPAGE</p>
+                <img src="../../images/menu-06.png" alt="">
+            </li>
+            <li>
+                07
+                <p class="list-img">MESSAGE</p>
+                <img src="../../images/menu-07.png" alt="">
+            </li>
+            <li onclick="location.href='../login/index.html'">
+                08
+                <p class="list-img">LOGIN</p>
+                <img src="../../images/menu-08.png" alt="">
+            </li>
+        </ul>
+        <div class="sns-container">
+            <ul class="sns-icon">
+                <li class="link" onclick="link('https://t.me/erugo_offi')"></li>
+                <li class="link" onclick="link('https://open.kakao.com/o/gCeEqVzd')"></li>
+                <li class="link" onclick="link('https://blog.naver.com/erugocoin_official')"></li>
+                <li class="link" onclick="link('https://t.me/erugo')"></li>
+                <li class="link" onclick="link('https://twitter.com/ErugoWorldCoin')"></li>
+                <li class="link" onclick="link('https://www.youtube.com/channel/UCj-Hyp1afwEgmSJ6gTYx4wA')"></li>
+            </ul>
+            <ul class="copyright">
+                <li>
+                    <address>Address : 129, Seochojungang-ro 8-gil, Seocho-gu, Seoul, Republic of Korea</address>
+                </li>
+                <li>Phone : +82 2 545 0265 ㅣ Email : erugo@erugoworld.com
+                </li>
+                <li>Business Registration Number : 672 88 01781 ㅣCEO : Jungsu Kim</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        let iconImg = document.querySelectorAll('.link');
+        let listImg = document.querySelectorAll(".list-img");
+        let liHover = document.querySelectorAll('li');
+        for (let i = 0; i < iconImg.length; i++) {
+            iconImg[i].style.background = `url(../../images/icon-${i + 1}.png) no-repeat center`;
+        }
+
+        function link(url) {
+            location.href = url;
+        }
+
+        function closeBtn() {
+            history.go(-1);
+        }
+
+    </script>
+</body>
+
+</html>

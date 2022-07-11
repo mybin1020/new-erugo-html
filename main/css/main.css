@@ -24,6 +24,7 @@ a {
 /* erugo logo */
 .logo {
   flex: 4;
+  cursor: pointer;
 }
 
 /* menu 버튼 */
@@ -31,6 +32,9 @@ a {
   flex: 1;
   display: flex;
   justify-content: space-evenly;
+}
+.headBtn > span {
+  cursor: pointer;
 }
 
 /* 메인 배경 */
@@ -45,8 +49,9 @@ a {
 /* mainpage 버튼들 */
 .boxContainer {
   height: calc(100vh - 135px);
-  background-color: rgba(0, 0, 0, 0.288);
+  background-color: rgba(0, 0, 0, 0.2);
   position: relative;
+  z-index: 5;
 }
 .boxs {
   display: flex;
@@ -69,7 +74,7 @@ a {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 100px;
+  bottom: 10%;
   z-index: 0;
   display: flex;
   width: 90%;
@@ -78,9 +83,11 @@ a {
 .pageN {
   align-self: flex-end;
   font-size: 50px;
+  /* margin: 0 30vmax; */
 }
 .goingLeft {
   background: url(../images/going-left.png) no-repeat center center;
+  left: 0;
 }
 .goingRight {
   background: url(../images/going-right.png) no-repeat center center;

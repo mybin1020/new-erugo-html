@@ -1,0 +1,107 @@
+.color {
+  background-color: #000;
+}
+.menuContainer {
+  width: 97%;
+  margin: 0 auto;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 200px 4fr 530px;
+  align-items: center;
+  position: relative;
+}
+.menu {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: #ff811e;
+}
+.close-btn {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.close-btn > span {
+  display: inline-block;
+  /* margin-bottom: 10px; */
+  width: 40px;
+  height: 5px;
+}
+.one {
+  transform: rotate(45deg) translate(4px, 4px);
+  background-color: #fff;
+}
+.two {
+  transform: rotate(-45deg) translate(0px, 0px);
+  background-color: #f29419;
+}
+.menuList {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 0 auto;
+  height: 95vh;
+  justify-content: space-evenly;
+  padding: 0 20px;
+}
+.menuList > li {
+  display: flex;
+  height: 120px;
+  line-height: 120px;
+  cursor: pointer;
+  color: #fff;
+  position: relative;
+}
+.menuList img {
+  position: absolute;
+  width: 250px;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.5;
+  display: none;
+  left: 10%;
+}
+.menuList > li:hover img {
+  display: block;
+}
+
+.menuList > li:hover > p,
+.menuList > li:hover > span {
+  color: #ff811e;
+}
+.menuList p {
+  padding-left: 100px;
+  padding-right: 10px;
+  font-family: "Poller One", sans-serif;
+  font-size: 2.5vmax;
+}
+.menuList span {
+  font-family: "Poller One", sans-serif;
+  font-size: 1.5vmax;
+  width: 40%;
+  text-align: center;
+}
+.sns-container {
+  color: #fff;
+  align-self: flex-end;
+  font-size: 1vmax;
+  margin-bottom: 80px;
+}
+.sns-icon {
+  display: flex;
+  justify-content: flex-start;
+  height: 80px;
+  line-height: 80px;
+}
+.sns-icon > li {
+  width: 50px;
+  margin: 0 10px;
+}
+.copyright {
+  font-size: 15px;
+  line-height: 2;
+}
