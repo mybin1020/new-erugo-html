@@ -59,21 +59,30 @@
   height: 12vmax;
 }
 .myinfo-table {
-  width: 75%;
+  width: 70%;
   height: 15vmax;
   min-height: 200px;
   font-size: 0.8vmax;
   font-weight: 400;
   margin: 20px 0;
+  table-layout: fixed;
+  text-align: left;
+  padding: 0 10px;
 }
 .myinfo-table th {
+  width: 30%;
   font-weight: 400;
 }
-.myinfo-table td {
+.wallet-address {
   width: 50px;
-  background-color: yellow;
   overflow-x: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
+.wallet-address::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
 .rank-name {
   margin-top: 5%;
   font-size: 3vmax;
@@ -151,7 +160,7 @@
   background-color: rgba(255, 255, 255, 0.34);
   border: 2px solid #fff;
   box-shadow: 0 0 20px 0.6px rgba(63, 39, 108, 0.2);
-  padding: 10px;
+  padding: 10px 0;
   font-size: 1vmax;
 }
 .get-box > label {
@@ -308,11 +317,12 @@
   background-color: rgba(255, 255, 255, 0.34);
   box-shadow: 0 0 20.4px 0.6px rgba(63, 39, 108, 0.2);
   height: 3vmax;
-  min-height: 100px;
+  min-height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
+  padding: 10px 0;
 }
 .input-box > label {
   width: 20%;
@@ -351,6 +361,11 @@
   font-size: 1.4vmax;
 }
 
+.mypage-container input {
+  height: 3vmax;
+  min-height: 40px;
+}
+
 @media screen and (max-width: 920px) {
   .title {
     font-size: 2.5vmax;
@@ -358,6 +373,9 @@
   .mypage-container label,
   .mypage-container input {
     font-size: 1.5vmax;
+  }
+  .mypage-container input {
+    min-height: 60px;
   }
   .infos > label {
     width: 30%;
@@ -406,10 +424,6 @@
     line-height: 8vmax;
     font-size: 2vmax;
   }
-
-  .input-box {
-    min-height: 7vmax;
-  }
   .input-box > label {
     width: 30%;
   }
@@ -424,7 +438,7 @@
     position: absolute;
     width: 100%;
     right: 0;
-    bottom: -160%;
+    bottom: -130%;
   }
   .change-rugo > button {
     border: 3px solid #fff;
@@ -433,7 +447,20 @@
     font-size: 2vmax;
   }
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 720px) {
+  .mypage-container label,
+  .mypage-container input,
+  .myinfo-table {
+    font-size: 2.5vmax;
+  }
+  .rank-img {
+    width: 20vmax;
+    height: 20vmax;
+  }
+  .get-box,
+  .input-box {
+    height: 5vmax;
+  }
   .mypage-info-container {
     padding-top: 7%;
   }
@@ -452,9 +479,7 @@
   .mypage-container input {
     height: 50px;
   }
-  .get-box {
-    min-height: 50px;
-  }
+
   .get-item {
     margin-top: 10%;
   }
@@ -472,15 +497,42 @@
     flex-direction: column;
   }
   .rugo-box > img {
-    width: 20%;
+    width: 12%;
     transform: rotate(90deg);
   }
   .change-btn {
     bottom: -50%;
   }
   .rugo-box button {
-    height: 5vmax;
-    line-height: 5vmax;
+    height: 7vmax;
+    line-height: 7vmax;
+    font-size: 1.7vmax;
+  }
+}
+@media screen and (max-width: 420px) {
+  .mypage-container label,
+  .mypage-container input,
+  .myinfo-table {
+    font-size: 1.8vmax;
+  }
+  .rank-img {
+    width: 12vmax;
+    height: 12vmax;
+  }
+  .get-box,
+  .input-box {
+    min-height: 50px;
+  }
+  .myinfo-table td {
+    font-size: 1.6vmax;
+  }
+  .info-box {
+    min-height: 140px;
+  }
+  .change-btn {
+    bottom: -55%;
+  }
+  .wallet-notice {
     font-size: 1.7vmax;
   }
 }
