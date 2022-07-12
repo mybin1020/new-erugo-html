@@ -20,7 +20,7 @@
         <div class="mypage-info-container">
             <div class="my-info">
                 <div class="rank-img">
-                    <img src="../../images/icon-dey.png" alt="등급" style="width: 100%; height:100%;">
+                    <img src="../../images/icon-going.png" alt="등급" style="width: 100%; height:100%;">
                 </div>
                 <table class="myinfo-table">
                     <tr>
@@ -40,7 +40,7 @@
                     </tr>
                     <tr>
                         <th>Wallet</th>
-                        <td>{walletAddress}</td>
+                        <td>{walletAddress}adfafasfasfasfasfasfasdfasfsadfasdf</td>
                     </tr>
                 </table>
                 <h3 class="rank-name">GOING</h3>
@@ -48,22 +48,22 @@
             <div class="info-container">
                 <p class="title">Erugo World 정보</p>
                 <form class="info-box ew-info">
-                    <p>
+                    <p class="infos">
                         <label for="ew-ewc">EW EWC</label>
                         <input type="text" name="ew-ewc" placeholder="0" />
                     </p>
-                    <p>
+                    <p class="infos">
                         <label for="ew-rugo">EW RUGO</label>
                         <input type="text" name="ew-rugo" placeholder="0" />
                     </p>
                 </form>
                 <p class="title">Security Wallet 정보</p>
-                <form class="info-box ">
-                    <p>
+                <form class="info-box">
+                    <p class="infos">
                         <label for="sw-eth">SW ETH</label>
                         <input type="text" name="sw-eth" placeholder="0.000000000" />
                     </p>
-                    <p>
+                    <p class="infos">
                         <label for="sw-ewc">SW EWC</label>
                         <input type="text" name="sw-ewc" placeholder="0.000000000" />
                     </p>
@@ -71,41 +71,43 @@
                 <!-- 거래소에서 가져오기 -->
                 <form class="get-item">
                     <p class="title">거래소에서 가져오기</p>
-                    <p class="input-box">
+                    <p class="get-box">
                         <label for="lbank">LBANK</label>
                         <input type="text" name="lbank" placeholder="이체방법 확인" disabled />
                     </p>
                     <br>
                     <p class="title">Security Wallet에서 가져오기</p>
-                    <p class="input-box width">
-                        <label for="sw-ewc">SW EWC</label>
-                        <input type="text" name="sw-ewc" placeholder="0" />
-                        <button type="button" class="custom-btn right btn-6"><span>Exchange</span></button>
-                    </p>
+                    <div class="width">
+                        <p class="get-box">
+                            <label for="sw-ewc">SW EWC</label>
+                            <input type="text" name="sw-ewc" placeholder="0" />
+                        </p>
+                        <button type="button" class="custom-btn btn-6"><span>Exchange</span></button>
+                    </div>
                     <!-- sw EWC 개수 변수 -->
                     <p class="wallet-notice">※ SecurityWallet EWC 개수는0.00000000 개 입니다</p>
                 </form>
             </div>
         </div>
-        <div class="rugo-change">
-            <form class="change-rugo">
-                <p class="title">RUGO로 변환하기</p>
+        <form class="change-rugo">
+            <p class="title">RUGO로 변환하기</p>
+            <div class="rugo-box">
                 <p class="input-box">
                     <label for="sw-ewc">EW EWC</label>
                     <input type="text" name="sw-ewc" placeholder="0" />
                 </p>
-                <p class="change-arrow-img">
-                    <img src="../../images/arrow-left.png" alt="화살표">
-                    <button type="button" class="custom-btn rugo-exchange btn-6"><span>Exchange</span></button>
-                </p>
+                <img src="../../images/arrow-left.png" alt="화살표">
                 <p class="input-box">
                     <label for="rugo">RUGO</label>
                     <input type="text" name="rugo" placeholder="0" />
                 </p>
-                <p class="wallet-notice">EXCHANGE RATE : 1 Erugo Coin = 2601 RUGO</p>
-                <button type="button">로그아웃</button>
-            </form>
-        </div>
+                <p class="change-btn">
+                    <button type="button" class="custom-btn rugo-exchange btn-6"><span>Exchange</span></button>
+                </p>
+            </div>
+            <p class="wallet-notice">EXCHANGE RATE : 1 Erugo Coin = 2601 RUGO</p>
+            <button type="button">로그아웃</button>
+        </form>
 
     </div>
 

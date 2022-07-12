@@ -1,3 +1,6 @@
+.mypage-container {
+  overflow: hidden;
+}
 /* head menu */
 .headMenu {
   background-color: rgba(50, 256, 256, 0.2);
@@ -8,6 +11,7 @@
   align-items: center;
   justify-content: space-around;
   text-align: center;
+  overflow: hidden;
 }
 /* 언어 */
 .lang {
@@ -33,34 +37,59 @@
 }
 
 .mypage-info-container {
-  padding: 50px 0;
+  padding-top: 70px;
   display: flex;
   justify-content: space-evenly;
 }
 /* my-info left */
 .my-info {
-  background: url(../images/mydata-character-bg.png) no-repeat;
-  background-size: contain;
-  width: 30%;
-  height: 45vmax;
+  background: url(../images/mydata-character-bg.png) no-repeat center;
+  background-size: 100% 100%;
+  width: 25%;
+  height: 40vmax;
+  min-height: 500px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  background-color: rgba(153, 205, 50, 0.587);
 }
 .rank-img {
-  width: 15vmax;
-  height: 15vmax;
+  width: 12vmax;
+  height: 12vmax;
 }
+.myinfo-table {
+  width: 75%;
+  height: 15vmax;
+  min-height: 200px;
+  font-size: 0.8vmax;
+  font-weight: 400;
+  margin: 20px 0;
+}
+.myinfo-table th {
+  font-weight: 400;
+}
+.myinfo-table td {
+  width: 50px;
+  background-color: yellow;
+  overflow-x: scroll;
+}
+.rank-name {
+  margin-top: 5%;
+  font-size: 3vmax;
+  font-family: "Vitro_core", sans-serif;
+}
+
 /* info-container right */
 .title {
-  font-size: 1.4vmax;
-  margin-bottom: 7px;
-  font-weight: 700;
+  font-size: 1.2vmax;
+  margin-bottom: 20px;
+  font-weight: 500;
 }
+
 .info-container {
   width: 50%;
-  min-height: 440px;
+  /* min-height: 600px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,26 +98,33 @@
   border: 2px solid #fff;
   background-color: rgba(255, 255, 255, 0.34);
   box-shadow: 0 0 20.4px 0.6px rgba(63, 39, 108, 0.2);
-  height: 17vh;
-  min-height: 140px;
+  height: 10vmax;
+  min-height: 180px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
 }
 .ew-info {
   margin-bottom: 30px;
 }
+.infos {
+  display: flex;
+  width: 95%;
+  justify-content: center;
+  align-items: center;
+}
 .info-box label {
+  align-content: center;
   display: inline-block;
   text-align: center;
-  height: 50px;
-  width: 30%;
-  line-height: 50px;
+  font-size: 1vmax;
+  width: 20%;
 }
 .info-box input {
   font-family: "Noto Sans KR", sans-serif;
-  width: 60%;
-  height: 50px;
+  width: 75%;
+  height: 70px;
   text-align: center;
   font-size: 1vmax;
   background-color: #fff;
@@ -99,60 +135,65 @@
 
 /* 거래소에서 가져오기 */
 .get-item {
-  width: 99%;
-  height: 500px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  margin-top: 5%;
+  justify-content: center;
+  margin-top: 3%;
 }
 
-.input-box {
-  width: 100%;
-  height: 60px;
+.get-box {
+  height: 3vmax;
+  min-height: 70px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.34);
   border: 2px solid #fff;
   box-shadow: 0 0 20px 0.6px rgba(63, 39, 108, 0.2);
   padding: 10px;
-  padding-left: 0;
   font-size: 1vmax;
 }
-.width {
-  width: 80%;
-  margin: 0;
-  position: relative;
-}
-.input-box > label {
+.get-box > label {
   display: inline-block;
-  width: 9vmax;
-  max-width: 90px;
+  width: 15%;
   text-align: center;
-  margin-right: 10px;
 }
-.width > input {
-  width: 100px;
-  background-color: #fff;
-}
-.input-box > input {
-  flex: 1;
-  height: 50px;
+.get-box > input {
+  width: 76%;
+  height: 70px;
   text-align: center;
   font-family: "Noto Sans KR", sans-serif;
   font-size: 1vmax;
   background-color: #fff;
 }
+.width {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.width > .get-box {
+  width: 100%;
+}
+.width label {
+  width: 20%;
+}
+.width input {
+  width: 72%;
+}
 .wallet-notice {
-  font-size: 1.5vmax;
-  margin-top: 7px;
+  font-weight: 100;
+  font-size: 1vmax;
+  margin-top: 10px;
 }
 
 /* custom-btn */
 .custom-btn {
-  width: 2vmax;
-  height: 60px;
+  width: 12vmax;
+  height: 100px;
+  margin: 0 10px;
+  line-height: 100px;
+  font-size: 1vmax;
   color: #fff;
   border-radius: 10px;
   padding: 10px 25px;
@@ -161,17 +202,13 @@
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  /* position: absolute; */
+  /* top: 50%;
+  transform: translateY(-50%); */
   display: inline-block;
   box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
     7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
-}
-.right {
-  width: 12vmax;
-  right: -20%;
 }
 .btn-6 {
   background: rgb(247, 150, 192);
@@ -180,7 +217,7 @@
     rgba(247, 150, 192, 1) 0%,
     rgba(118, 174, 241, 1) 100%
   );
-  line-height: 60px;
+
   padding: 0;
   border: none;
 }
@@ -250,28 +287,200 @@
 .btn-6 span:hover:after {
   width: 100%;
 }
-
+/* 루고로 변환하기 */
 .change-rugo {
-  background-color: rgba(0, 128, 128, 0.232);
-  height: 300px;
+  width: 85%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  /* margin: 0 10px; */
+  margin: 0 auto;
+  margin-top: 1%;
 }
-.change-arrow-img {
-  width: 100%;
-  height: 8vh;
+.rugo-box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   position: relative;
+}
+.input-box {
+  width: 100%;
+  border: 2px solid #fff;
+  background-color: rgba(255, 255, 255, 0.34);
+  box-shadow: 0 0 20.4px 0.6px rgba(63, 39, 108, 0.2);
+  height: 3vmax;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.input-box > label {
+  width: 20%;
+  font-size: 1vmax;
+}
+.input-box > input {
+  width: 70%;
+  text-align: center;
+  height: 70px;
+  line-height: 70px;
+  font-size: 1vmax;
+}
+.rugo-box > img {
+  width: 6%;
+  padding: 0 20px;
+}
+.change-btn {
+  width: 30%;
+  height: 8vmax;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.change-arrow-img > img {
-  height: 6vh;
-}
 .rugo-exchange {
-  position: absolute;
-  top: 50%;
-  right: 5px;
+  width: 100%;
+}
+.change-rugo > button {
+  width: 20%;
+  height: 4vmax;
+  min-height: 50px;
+  margin: 6% auto;
+  border-radius: 5vmax;
+  background-color: transparent;
+  border: 5px solid #fff;
+  color: #fff;
+  font-size: 1.4vmax;
+}
+
+@media screen and (max-width: 920px) {
+  .title {
+    font-size: 2.5vmax;
+  }
+  .mypage-container label,
+  .mypage-container input {
+    font-size: 1.5vmax;
+  }
+  .infos > label {
+    width: 30%;
+  }
+  .wallet-notice {
+    font-size: 15px;
+  }
+  .mypage-info-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .my-info {
+    width: 60%;
+    height: 60vmax;
+    margin-bottom: 10%;
+    background-position: center;
+  }
+  .rank-name {
+    margin-top: 0;
+    font-size: 5vmax;
+  }
+  .info-container {
+    width: 85%;
+  }
+
+  .myinfo-table {
+    font-size: 1.5vmax;
+    min-height: 30vmax;
+  }
+
+  .width {
+    width: 100%;
+  }
+  .get-box > input {
+    width: 70%;
+  }
+  .width > button {
+    width: 30%;
+    height: 8vmax;
+    line-height: 8vmax;
+    font-size: 2vmax;
+  }
+  .rugo-box button {
+    width: 100%;
+    height: 8vmax;
+    line-height: 8vmax;
+    font-size: 2vmax;
+  }
+
+  .input-box {
+    min-height: 7vmax;
+  }
+  .input-box > label {
+    width: 30%;
+  }
+  .input-box > input {
+    width: 60%;
+  }
+  .rugo-box > img {
+    padding: 0 5px;
+    width: 10%;
+  }
+  .change-btn {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    bottom: -160%;
+  }
+  .change-rugo > button {
+    border: 3px solid #fff;
+    width: 40%;
+    margin-top: 20%;
+    font-size: 2vmax;
+  }
+}
+@media screen and (max-width: 520px) {
+  .mypage-info-container {
+    padding-top: 7%;
+  }
+  .my-info {
+    width: 80%;
+    height: 55vmax;
+    margin: 5px 0;
+    margin-bottom: 7%;
+  }
+  .title {
+    font-size: 2vmax;
+  }
+  .myinfo-table {
+    min-height: 25vmax;
+  }
+  .mypage-container input {
+    height: 50px;
+  }
+  .get-box {
+    min-height: 50px;
+  }
+  .get-item {
+    margin-top: 10%;
+  }
+  .wallet-notice {
+    margin-bottom: 10%;
+  }
+  .width > button {
+    width: 40%;
+    height: 5vmax;
+    line-height: 5vmax;
+    font-size: 1.7vmax;
+  }
+
+  .rugo-box {
+    flex-direction: column;
+  }
+  .rugo-box > img {
+    width: 20%;
+    transform: rotate(90deg);
+  }
+  .change-btn {
+    bottom: -50%;
+  }
+  .rugo-box button {
+    height: 5vmax;
+    line-height: 5vmax;
+    font-size: 1.7vmax;
+  }
 }
