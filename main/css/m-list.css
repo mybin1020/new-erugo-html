@@ -1,0 +1,101 @@
+.body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.body::-webkit-scrollbar {
+  width: 10px;
+}
+.body::-webkit-scrollbar-thumb {
+  background-color: #f29419b6;
+  border-radius: 10px;
+  background-clip: padding-box;
+}
+.body::-webkit-scrollbar-track {
+  background-color: rgba(212, 212, 212, 0.581);
+  border-radius: 10px;
+}
+.table-head {
+  font-family: "S-CoreDream-4", sans-serif;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  align-items: center;
+  font-size: 1.2vmax;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+  border-bottom: 2px solid #000;
+  background-color: #fff;
+}
+
+.table {
+  font-family: "S-CoreDream-4", sans-serif;
+  font-size: 1.5vmax;
+  display: flex;
+  text-align: center;
+  height: 30px;
+  align-items: center;
+  padding: 40px 0;
+  border-bottom: 0.5px solid #707070;
+  font-size: 1vmax;
+}
+.table-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow: hidden;
+}
+.table-container::-webkit-scrollbar {
+  display: none;
+}
+/* 메시지 */
+.tableHeader-1,
+.tableNum {
+  width: 10%;
+}
+.tableHeader-2,
+.tableTitle {
+  width: 40%;
+}
+.tableHeader-3,
+.tableDay {
+  width: 35%;
+}
+.tableHeader-4,
+.tableSend {
+  width: 15%;
+}
+
+/* 활동이력 */
+.tableHeader-01,
+.table-num {
+  width: 10%;
+}
+.tableHeader-02,
+.table-title {
+  width: 20%;
+}
+.tableHeader-03,
+.table-state {
+  width: 15%;
+}
+.tableHeader-04,
+.table-ewc {
+  width: 20%;
+}
+.tableHeader-05,
+.table-rugo {
+  width: 20%;
+}
+.tableHeader-06,
+.table-day {
+  width: 15%;
+}
+@media screen and (max-width: 920px) {
+  .table {
+    font-size: 2vmax;
+    padding: 3vmax 0;
+  }
+  .body::-webkit-scrollbar {
+    width: 2vmin;
+  }
+}

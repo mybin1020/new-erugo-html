@@ -51,10 +51,10 @@
 .menuList > li {
   display: flex;
   height: 120px;
-  line-height: 120px;
   cursor: pointer;
   color: #fff;
   position: relative;
+  align-items: center;
 }
 .menuList img {
   position: absolute;
@@ -98,10 +98,173 @@
   line-height: 80px;
 }
 .sns-icon > li {
-  width: 50px;
-  margin: 0 10px;
+  width: 70px;
+  margin: 0 5px;
 }
 .copyright {
   font-size: 15px;
   line-height: 2;
+}
+@media screen and (max-width: 1920px) {
+  .menuContainer {
+    grid-template-columns: 100px 1300px 530px;
+    background-color: yellowgreen;
+  }
+}
+@media screen and (max-width: 920px) {
+  .menuContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-btn {
+    width: 85%;
+  }
+  .close-btn {
+    top: 4%;
+    right: 2%;
+  }
+  .menu {
+    margin-top: 10%;
+    text-align: left;
+    writing-mode: inherit;
+    transform: rotate(360deg);
+  }
+  .menuList {
+    width: 85%;
+    height: 80vmax;
+    margin: 8% 0;
+  }
+  .menuList > li {
+    height: 7vmax;
+    font-size: 1.5vmax;
+  }
+  .menuList p {
+    padding-left: 50px;
+  }
+  .sns-container {
+    width: 85%;
+    align-self: flex-start;
+    margin: 0 auto;
+    padding-bottom: 5%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .menu {
+    font-size: 2vmax;
+  }
+  .menuList {
+    padding: 0;
+    width: 90%;
+  }
+  .menuList p {
+    padding-left: 5vmin;
+    padding-right: 0;
+  }
+  .menuList span {
+    width: 100%;
+    font-size: 1vmax;
+  }
+  .copyright {
+    font-size: 1vmax;
+  }
+  .sns-icon > li {
+    margin: 0;
+  }
+}
+/* 가로 */
+@media (orientation: landscape) {
+  @media screen and (max-width: 1240px) {
+    .menuContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .menu-btn {
+      width: 85%;
+    }
+    .close-btn {
+      top: 6%;
+      right: 2%;
+    }
+    .menu {
+      margin-top: 5%;
+      text-align: left;
+      writing-mode: inherit;
+      transform: rotate(360deg);
+    }
+    .menuList {
+      width: 85%;
+      height: 80vmax;
+      margin: 5% 0;
+    }
+    .menuList > li {
+      height: 8vmax;
+      line-height: 8vmax;
+      font-size: 1.5vmax;
+    }
+    .menuList p {
+      padding-left: 50px;
+    }
+    .menuList span {
+      width: 20%;
+    }
+    .sns-container {
+      width: 85%;
+      align-self: flex-start;
+      margin: 0 auto;
+      padding-bottom: 5%;
+    }
+  }
+  @media screen and (max-width: 920px) {
+    .close-btn {
+      top: 10%;
+    }
+    .copyright {
+      font-size: 1.2vmax;
+    }
+  }
+}
+/* 세로 */
+@media screen and (orientation: portrait) {
+  @media (max-width: 1920px) {
+    .menuContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .menu-btn {
+      width: 85%;
+    }
+    .close-btn {
+      top: 4%;
+      right: 2%;
+    }
+    .menu {
+      margin-top: 10%;
+      text-align: left;
+      writing-mode: inherit;
+      transform: rotate(360deg);
+    }
+    .menuList {
+      width: 85%;
+      height: 80vmax;
+      margin: 8% 0;
+    }
+    .menuList > li {
+      height: 7vmax;
+      font-size: 1.5vmax;
+    }
+    .menuList p {
+      padding-left: 50px;
+    }
+    .sns-container {
+      width: 85%;
+      align-self: flex-start;
+      margin: 0 auto;
+      padding-bottom: 5%;
+    }
+  }
 }

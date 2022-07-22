@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>message</title>
+    <link rel="stylesheet" href="../../css/defult.css">
+    <link rel="stylesheet" href="../../css/button.css">
+    <link rel="stylesheet" href="../../css/message.css">
+</head>
+
+<body>
+    <div class="message-container">
+        <div class="headMenu">
+            <div class="lang"><span>kr</span><span>eng</span></div>
+            <h1 class="logo">logo</h1>
+            <div class="headBtn">menu</div>
+        </div>
+        <div class="message-menu">
+            <h2 class="message-title">MESSAGE</h2>
+            <div class="button-container">
+                <p onclick="click_contents('./m-list/message.html')" data-attr="메시지">메시지</p>
+                <p onclick="click_contents('./m-list/activity.html')" data-attr="활동이력">활동이력</p>
+            </div>
+        </div>
+        <ul class="table-head">
+            <li class="tableHeader-01" style="width: 10%;">순서</li>
+            <li class="tableHeader-02" style="width: 40%;">제목</li>
+            <li class="tableHeader-03" style="width: 35%;">시간</li>
+            <li class="tableHeader-04" style="width: 15%;">보낸이</li>
+            <li class="tableHeader-05" style="width: 0%;"></li>
+            <li class="tableHeader-06" style="width: 0%;"></li>
+        </ul>
+        <div class="message-content">
+            <iframe style="border:none;" id='content_frame' width="100%" height="100%"
+                src="./m-list/message.html"></iframe>
+        </div>
+        <div class="page-btn">
+            <p><img src="../../images/circle-arrow1.png" alt="left arrow button"></p>
+            <p class="num">1</p>
+            <p><img src="../../images/circle-arrow2.png" alt="right arrow button"></p>
+        </div>
+    </div>
+</body>
+
+<script>
+    // 높이 
+    let windowHeight = window.innerHeight;
+    let widnowWidth = window.innerWidth;
+    let headHeight = document.querySelector(" .headMenu").clientHeight;
+    let messageHeight = document.querySelector(".message-menu").clientHeight;
+    let contentHeight = document.querySelector(".message-content");
+    if (windowHeight < widnowWidth && widnowWidth < 920) {
+        contentHeight.style.height = widnowWidth - (headHeight + messageHeight) + 'px';
+    } else {
+        contentHeight.style.height = windowHeight - (headHeight + messageHeight) + 'px';
+    }
+
+
+    function click_contents(url) {
+        document.getElementById("content_frame").src = url;
+        let isClick = false;
+        let activity_list = [
+            {
+                title: '이벤트',
+                width: '10%'
+            },
+            {
+                title: '요청액',
+                width: '20%'
+            },
+            {
+                title: '처리결과',
+                width: '15%'
+            },
+            {
+                title: 'EWC잔액',
+                width: '20%'
+            },
+            {
+                title: 'RUGO잔액',
+                width: "20%"
+            },
+            {
+                title: '시간',
+                width: '15%'
+            },
+        ]
+        let message_list = [
+            {
+                title: '순서',
+                width: '10%'
+            },
+            {
+                title: '제목',
+                width: '40%'
+            },
+            {
+                title: '시간',
+                width: '35%'
+            },
+            {
+                title: '보낸이',
+                width: '15%'
+            },
+            {
+                title: '',
+                width: 0
+            },
+            {
+                title: '',
+                width: 0
+            },
+        ]
+
+        const tableList = document.querySelectorAll('.table-head li');
+        if (url == "./m-list/activity.html") {
+            for (var i = 0; i < tableList.length; i++) {
+                tableList[i].innerHTML = activity_list[i].title;
+                tableList[i].style.width = activity_list[i].width;
+            }
+            document.documentElement.style.setProperty('--rotate90', '0deg');
+            document.documentElement.style.setProperty('--rotate0', '90deg');
+            document.documentElement.style.setProperty('--translate_before1', '0%');
+            document.documentElement.style.setProperty('--translate_before2', '0%');
+            document.documentElement.style.setProperty('--translate_after1', '50%');
+            document.documentElement.style.setProperty('--translate_after2', '-50%');
+        }
+
+        if (url == "./m-list/message.html") {
+            for (var i = 0; i < tableList.length; i++) {
+                tableList[i].innerHTML = message_list[i].title;
+                tableList[i].style.width = message_list[i].width;
+            }
+            document.documentElement.style.setProperty('--rotate90', '90deg');
+            document.documentElement.style.setProperty('--rotate0', '0deg');
+            document.documentElement.style.setProperty('--translate_before1', '-50%');
+            document.documentElement.style.setProperty('--translate_before2', '50%');
+            document.documentElement.style.setProperty('--translate_after1', '0%');
+            document.documentElement.style.setProperty('--translate_after2', '0%');
+
+        }
+    }
+    document.documentElement.style.setProperty('--transform_rotate', '90deg');
+    document.documentElement.style.setProperty('--transform_translate', '-50%');
+    function messageBtnup() {
+        // document.documentElement.style.setProperty('--transform_rotate','90deg')
+        alert('white')
+    }
+    function messageBtnDown() {
+        document.documentElement.style.setProperty('--rotate0', '0deg');
+        document.documentElement.style.setProperty('--translate0', '0%');
+        alert('orange')
+    }
+</script>
+
+</html>

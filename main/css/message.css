@@ -1,0 +1,83 @@
+.message-container {
+  position: relative;
+  /* background-color: yellow; */
+}
+/* head menu */
+.headMenu {
+  background-color: rgba(50, 256, 256, 0.2);
+  width: 100%;
+  height: 135px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  overflow: hidden;
+}
+/* 언어 */
+.lang {
+  flex: 1;
+}
+.lang > span {
+  padding: 0px 20px;
+}
+
+/* erugo logo */
+.logo {
+  flex: 4;
+}
+
+/* menu 버튼 */
+.headBtn {
+  flex: 1;
+}
+.message-menu,
+.message-content {
+  width: 95%;
+  margin: 0 auto;
+}
+.message-title {
+  font-size: 5vmax;
+  font-family: "Poller One", sans-serif;
+  margin: 50px 0;
+  margin-bottom: 3%;
+}
+.message-menu {
+  margin: 30px auto;
+}
+
+.table-head {
+  font-family: "S-CoreDream-4", sans-serif;
+  display: flex;
+  width: 95%;
+  height: 100px;
+  margin: 0 auto;
+  align-items: center;
+  font-size: 1.2vmax;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+  border-bottom: 2px solid #000;
+  background-color: #fff;
+}
+
+.page-btn {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.num {
+  width: 5%;
+  text-align: center;
+}
+
+@media screen and (max-width: 920px) {
+  .message-title {
+    font-size: 6vmax;
+  }
+  .table-head {
+    font-size: 1.5vmax;
+    height: 60px;
+  }
+}

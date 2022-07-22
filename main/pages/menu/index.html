@@ -38,7 +38,7 @@
                 <span>/ HIGHEST BID</span>
                 <img src="../../images/menu-03.png" alt="">
             </li>
-            <li>
+            <li onclick="location.href='../buyland/index.html'">
                 04
                 <p class="list-img">BUY LAND</p>
                 <img src="../../images/menu-04.png" alt="">
@@ -53,7 +53,7 @@
                 <p class="list-img">MYPAGE</p>
                 <img src="../../images/menu-06.png" alt="">
             </li>
-            <li>
+            <li onclick="location.href='../message/index.html'">
                 07
                 <p class="list-img">MESSAGE</p>
                 <img src="../../images/menu-07.png" alt="">
@@ -90,6 +90,7 @@
         let liHover = document.querySelectorAll('li');
         for (let i = 0; i < iconImg.length; i++) {
             iconImg[i].style.background = `url(../../images/icon-${i + 1}.png) no-repeat center`;
+            iconImg[i].style.backgroundSize = 'contain';
         }
 
         function link(url) {

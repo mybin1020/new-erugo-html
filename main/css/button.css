@@ -1,0 +1,92 @@
+:root {
+  --rotate90: 90deg;
+  --rotate0: 0deg;
+  --translateM: -50%;
+  --translateP: 50%;
+  --translate0: 0%;
+}
+.button-container {
+  text-decoration: none;
+  font-size: 1.5vmax;
+  display: flex;
+}
+.button-container p {
+  display: inline-block;
+  width: 10vmax;
+  height: 5vmax;
+  min-width: 150px;
+  min-height: 75px;
+  text-align: center;
+  transition: 0.5s;
+  position: relative;
+}
+
+:root {
+  --rotate90: 90deg;
+  --rotate0: 0deg;
+  --translate_before1: 0%;
+  --translate_before2: 0%;
+  --translate_after1: 0%;
+  --translate_after2: 0%;
+}
+.button-container p:nth-child(1):before {
+  transform: rotateX(var(--rotate90)) translateY(var(--translate_before1));
+}
+.button-container p:nth-child(2):before {
+  transform: rotateX(var(--rotate90)) translateY(var(--translate_before2));
+}
+.button-container p:nth-child(1):after {
+  transform: rotateX(var(--rotate0)) translateY(var(--translate_after1));
+}
+
+.button-container p:nth-child(2):after {
+  transform: rotateX(var(--rotate0)) translateY(var(--translate_after2));
+}
+
+.button-container p:nth-child(1):before,
+.button-container p:nth-child(2):before,
+.button-container p:nth-child(1):after,
+.button-container p:nth-child(2):after {
+  content: attr(data-attr);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.16);
+  width: 10vmax;
+  height: 5vmax;
+  min-width: 150px;
+  min-height: 75px;
+  transition: 0.6s;
+}
+.button-container p:nth-child(1),
+.button-container p:nth-child(2) {
+  color: #fff;
+}
+.button-container p:nth-child(1):before,
+.button-container p:nth-child(2):after {
+  background-color: #fff;
+  color: #000;
+  transform-origin: top;
+  z-index: 1;
+}
+.button-container p:nth-child(1):after,
+.button-container p:nth-child(2):before {
+  background-color: #f29419;
+  transform-origin: bottom;
+}
+@media screen and (max-width: 920px) {
+  .button-container {
+    font-size: 2vmax;
+  }
+  .button-container p,
+  .button-container p:nth-child(1):before,
+  .button-container p:nth-child(2):before,
+  .button-container p:nth-child(1):after,
+  .button-container p:nth-child(2):after {
+    min-width: 120px;
+    min-height: 60px;
+  }
+}

@@ -1,0 +1,100 @@
+/* head menu */
+.headMenu {
+  background-color: rgba(50, 256, 256, 0.2);
+  width: 100%;
+  height: 135px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+/* 언어 */
+.lang {
+  flex: 1;
+}
+.lang > span {
+  padding: 0px 20px;
+}
+
+/* erugo logo */
+.logo {
+  flex: 4;
+  cursor: pointer;
+}
+
+/* menu 버튼 */
+.headBtn {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+}
+.headBtn > span {
+  cursor: pointer;
+}
+/* topSection: 제목, 페이지수 */
+.topSection {
+  background-color: rgba(255, 255, 0, 0.3);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-top: 135px;
+  height: 250px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: "Poller One", cursive;
+  color: #010101;
+  font-size: 164px;
+  flex: 1;
+}
+.scroll {
+  flex: 2;
+}
+.pageNum {
+  position: fixed;
+  right: 5%;
+  text-align: center;
+  line-height: 150px;
+  border-radius: 50%;
+  min-width: 150px;
+  min-height: 150px;
+  background-color: rgba(105, 90, 205, 0.314);
+}
+.buyland-container {
+  width: 100%;
+}
+.buyland-container::after {
+  content: "";
+  display: block;
+  position: fixed;
+  z-index: -1;
+  bottom: 0;
+  background: url(../images/buylandBg.png) no-repeat;
+  background-size: contain;
+  background-position-y: bottom;
+  width: 100%;
+  height: 100vh;
+}
+.first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 20vmax;
+  background-color: yellowgreen;
+}
+.buylandContent {
+  width: 700%;
+}
+.storys {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+.storys > li {
+  width: 100%;
+}
