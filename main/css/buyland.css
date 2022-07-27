@@ -1,3 +1,11 @@
+.body-scroll {
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.body-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
 /* head menu */
 .headMenu {
   background-color: rgba(50, 256, 256, 0.2);
@@ -9,6 +17,7 @@
   align-items: center;
   justify-content: space-around;
   text-align: center;
+  z-index: 1;
 }
 /* 언어 */
 .lang {
@@ -36,10 +45,14 @@
 /* topSection: 제목, 페이지수 */
 .topSection {
   background-color: rgba(255, 255, 0, 0.3);
+  position: absolute;
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  padding-top: 135px;
+  top: 150px;
   height: 250px;
   width: 90%;
   margin: 0 auto;
@@ -48,7 +61,7 @@
 .title {
   font-family: "Poller One", cursive;
   color: #010101;
-  font-size: 164px;
+  font-size: 6vmax;
   flex: 1;
 }
 .scroll {
@@ -56,45 +69,145 @@
 }
 .pageNum {
   position: fixed;
+  z-index: 1;
+  top: 18%;
   right: 5%;
   text-align: center;
-  line-height: 150px;
   border-radius: 50%;
+  line-height: 150px;
   min-width: 150px;
   min-height: 150px;
   background-color: rgba(105, 90, 205, 0.314);
 }
 .buyland-container {
   width: 100%;
+  height: 100vh;
+  position: relative;
 }
 .buyland-container::after {
   content: "";
   display: block;
   position: fixed;
-  z-index: -1;
   bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
   background: url(../images/buylandBg.png) no-repeat;
   background-size: contain;
   background-position-y: bottom;
-  width: 100%;
-  height: 100vh;
-}
-.first {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
-  height: 20vmax;
-  background-color: yellowgreen;
-}
-.buylandContent {
-  width: 700%;
 }
 .storys {
   position: relative;
   display: flex;
+  align-items: center;
+  top: 260px;
   width: 100%;
+  height: calc(88vh - 135px - 135px - 150px);
 }
 .storys > li {
   width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.width {
+  height: 30vmax;
+  align-self: center;
+}
+.first {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  overflow: hidden;
+  margin: 0;
+  /* background-color: yellowgreen; */
+}
+.buylandContent {
+  width: 700%;
+  height: 100%;
+}
+
+.img {
+  background: url(../images/about1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  align-self: center;
+  flex: 1;
+  height: 95%;
+  background-color: rgba(238, 130, 238, 0.414);
+}
+.content {
+  align-self: flex-end;
+  height: 50%;
+  flex: 1;
+  background-color: rgba(64, 224, 208, 0.439);
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.content::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+@media screen and (orientation: portrait) {
+  @media screen and (max-width: 920px) {
+    .topSection {
+      flex-direction: column;
+      align-items: flex-start;
+      top: 250px;
+      height: 170px;
+    }
+    .scroll {
+      flex: none;
+    }
+    .title {
+      font-size: 8vmax;
+    }
+    .buyland-container::after {
+      z-index: 1;
+    }
+    .buylandContent {
+      width: 100%;
+    }
+    .storys {
+      top: 450px;
+      flex-direction: column;
+      height: 580vh;
+    }
+    .storys > li {
+      /* background-color: yellowgreen; */
+      align-content: flex-start;
+      justify-content: space-evenly;
+      width: 90%;
+      height: 80vh;
+      margin: 5% 0;
+    }
+    .mainContent1 {
+      margin-top: 0 !important;
+    }
+    .width {
+      flex-direction: column;
+    }
+    .img {
+      width: 100%;
+      height: 100%;
+    }
+    .first {
+      flex-wrap: wrap;
+      overflow: unset;
+      height: 50vh !important;
+    }
+    .first > img {
+      width: 30%;
+    }
+    .pageNum {
+      top: 12%;
+      line-height: 90px;
+      min-width: 90px;
+      min-height: 90px;
+    }
+  }
 }
